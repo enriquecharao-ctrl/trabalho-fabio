@@ -29,10 +29,22 @@ body {
   max-width: 1100px;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  max-width: 140px;
+  height: auto;
+}
+
 .page-title {
   color: var(--white);
   text-align: center;
-  margin-bottom: 2rem;
   font-size: 2rem;
 }
 
@@ -43,13 +55,11 @@ body {
   justify-items: center;
 }
 
-
 @media (min-width: 768px) {
   .card-list {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
   }
 }
-
 
 .nft-card {
   background-color: var(--card-bg);
@@ -60,12 +70,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .nft-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
-
 
 .image-container {
   position: relative;
@@ -96,10 +104,14 @@ body {
   transition: opacity 0.3s ease;
 }
 
+.hover-overlay img {
+  width: 45px;
+  height: 45px;
+}
+
 .image-container:hover .hover-overlay {
   opacity: 1;
 }
-
 
 .card-content {
   margin-top: 1.5rem;
@@ -124,7 +136,6 @@ body {
   line-height: 1.5;
 }
 
-/* Status: Preço e Tempo */
 .card-status {
   display: flex;
   justify-content: space-between;
@@ -140,6 +151,11 @@ body {
   gap: 0.4rem;
 }
 
+.price img {
+  width: 18px;
+  height: 18px;
+}
+
 .time-left {
   display: flex;
   align-items: center;
@@ -153,7 +169,6 @@ body {
   margin: 1.2rem 0;
 }
 
-/* Autor / Avatar */
 .card-author {
   display: flex;
   align-items: center;
@@ -166,6 +181,7 @@ body {
   height: 33px;
   border: 1px solid var(--white);
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .card-author a {
@@ -176,4 +192,25 @@ body {
 
 .card-author a:hover {
   color: var(--cyan);
+}
+
+.animate__backInDown {
+  animation-name: backInDown;
+  animation-duration: 1.2s;
+  animation-fill-mode: both;
+}
+
+@keyframes backInDown {
+  0% {
+    transform: translateY(-1200px) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
