@@ -9,12 +9,39 @@
 </head>
 <body>
 
-  <main class="container">
-   
-    <header class="header animate__animated animate__fadeIn">
-      <img src="assets/logo.svg" alt="Logo" class="logo">
-      <h1 class="page-title">Our NFT Collection</h1>
+  <div class="container" id="top">
+    <header class="site-header">
+      <a class="site-brand" href="#top" aria-label="Cardlist home">
+        <span class="site-brand__logo">
+          <img src="assets/gpt-image-2_Create_a_polished_original_logo_for_Cardlist_a_curated_digital_art_and_NFT_galle-0.jpg" alt="">
+        </span>
+        <span class="site-brand__copy">
+          <span class="site-brand__name">Cardlist</span>
+          <span class="site-brand__tagline">Digital art, collected</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#collection" aria-current="page">Discover</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a class="header-cta" href="#collection">
+        Explore collection
+        <span aria-hidden="true">&rarr;</span>
+      </a>
     </header>
+
+    <main>
+      <section class="collection" id="collection" aria-labelledby="collection-title">
+        <div class="collection-heading">
+          <div>
+            <p class="eyebrow">A gallery of digital art</p>
+            <h1 class="page-title" id="collection-title">Our NFT Collection</h1>
+            <p class="collection-description">Discover original characters and otherworldly creations from independent artists.</p>
+          </div>
+          <p class="collection-count">12 unique artworks</p>
+        </div>
     
    
     <div class="card-list">
